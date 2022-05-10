@@ -1,7 +1,6 @@
 import numpy as np
 
 
-# 2.3.1 简单的实现
 def AND(x1, x2):
     w1, w2, theta = 0.5, 0.5, 0.7
     temp = x1 * w1 + x2 * w2
@@ -12,7 +11,6 @@ def AND(x1, x2):
         return 1
 
 
-# 2.3.2 导入权重中和偏置
 def NAND(x1, x2):
     x = np.array([x1, x2])
     w = np.array([-0.5, -0.5])
@@ -37,7 +35,6 @@ def OR(x1, x2):
         return 1
 
 
-# 2.5.2 异或门的实现
 def XOR(x1, x2):
     s1 = NAND(x1, x2)
     s2 = OR(x1, x2)

@@ -1,7 +1,8 @@
 import numpy as np
 
 from mypackge.ch03 import softmax
-from mypackge.ch04 import cross_entropy_error_mini_onehot, numerical_gradient,cross_entropy_error_mini_labels
+from mypackge.ch04 import cross_entropy_error_mini_onehot, numerical_gradient, cross_entropy_error_mini_labels, \
+    cross_entropy_error
 
 
 class simpleNet():
@@ -16,7 +17,7 @@ class simpleNet():
         y = self.pridict(x)
 
         #loss = cross_entropy_error_mini_onehot(y, t)
-        loss=cross_entropy_error_mini_labels(y, t)
+        loss=cross_entropy_error(y, t)
         return loss
 
 
